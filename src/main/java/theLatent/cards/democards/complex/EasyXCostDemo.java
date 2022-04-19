@@ -8,7 +8,7 @@ import theLatent.actions.EasyXCostAction;
 import theLatent.cards.AbstractEasyCard;
 
 import static theLatent.util.Wiz.*;
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 
 public class EasyXCostDemo extends AbstractEasyCard {
     public final static String ID = makeID("EasyXCostDemo");

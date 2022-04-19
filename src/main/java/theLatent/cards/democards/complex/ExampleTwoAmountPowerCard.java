@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theLatent.cards.AbstractEasyCard;
 import theLatent.powers.ExampleTwoAmountPower;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 import static theLatent.util.Wiz.applyToSelf;
 
 public class ExampleTwoAmountPowerCard extends AbstractEasyCard {

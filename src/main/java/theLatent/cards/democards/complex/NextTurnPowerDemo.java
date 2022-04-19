@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import theLatent.cards.AbstractEasyCard;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 import static theLatent.util.Wiz.applyToSelfNextTurn;
 
 public class NextTurnPowerDemo extends AbstractEasyCard {

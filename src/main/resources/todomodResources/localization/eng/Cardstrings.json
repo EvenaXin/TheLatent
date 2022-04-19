@@ -7,6 +7,23 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "${ModID}:HoldOut": {
+    "NAME": "Hold Out",
+    "DESCRIPTION": "Gain !B! Block. NL At the end of your turn, retain a card."
+  },
+  "${ModID}:Preamble": {
+    "NAME": "Preamble",
+    "DESCRIPTION": "Target card gains innate FOREVER. NL Fleeting. NL Ethereal."
+  },
+  "${ModID}:Retention": {
+    "NAME": "Retention",
+    "DESCRIPTION": "Target card gains retain FOREVER. NL Fleeting. NL Ethereal."
+  },
+  "${ModID}:PrepareArms": {
+    "NAME": "Prepare Arms",
+    "DESCRIPTION": "Startup: Gain 2 Vulnerable. NL Autoplay. NL Gain 2 Strength.",
+    "UPGRADE_DESCRIPTION": "Grave. NL Autoplay. NL Gain 2 Vulnerable. NL NL Startup: Gain 2 Strength."
+  },
   "${ModID}:ExampleTwoAmountPowerCard": {
     "NAME": "Two Amounts, One Power",
     "DESCRIPTION": "At start of turn, gain !M! Strength and 1 Dexterity."

@@ -9,7 +9,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 
 import java.util.HashMap;
 
-import static theLatent.TodoMod.makeImagePath;
+import static theLatent.LatentMod.makeImagePath;
 
 public class TexLoader {
     private static HashMap<String, Texture> textures = new HashMap<>();

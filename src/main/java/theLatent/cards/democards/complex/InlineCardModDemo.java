@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.beyond.Spiker;
 import theLatent.cardmods.LambdaMod;
 import theLatent.cards.AbstractEasyCard;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 import static theLatent.util.Wiz.makeInHand;
 import static theLatent.util.Wiz.returnTrulyRandomPrediCardInCombat;
 

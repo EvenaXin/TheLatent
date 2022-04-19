@@ -7,14 +7,14 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theLatent.TodoMod;
+import theLatent.LatentMod;
 
 import static theLatent.util.Wiz.*;
 
 public class ExampleTwoAmountPower extends AbstractEasyPower implements OnReceivePowerPower {
     // intellij stuff Example, buff, false
     private static final String SIMPLE_NAME = "ExampleTwoAmount";
-    public static final String POWER_ID = TodoMod.makeID(SIMPLE_NAME);
+    public static final String POWER_ID = LatentMod.makeID(SIMPLE_NAME);
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String LOC_NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

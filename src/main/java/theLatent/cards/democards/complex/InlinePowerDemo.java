@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theLatent.cards.AbstractEasyCard;
 import theLatent.powers.LambdaPower;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 import static theLatent.util.Wiz.applyToSelf;
 import static theLatent.util.Wiz.atb;
 

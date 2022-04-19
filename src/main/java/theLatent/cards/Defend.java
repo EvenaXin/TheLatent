@@ -3,7 +3,7 @@ package theLatent.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 
 public class Defend extends AbstractEasyCard {
     public final static String ID = makeID("Defend");

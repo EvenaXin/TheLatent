@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theLatent.cards.AbstractEasyCard;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 import static theLatent.util.Wiz.*;
 
 public class DrawAndShiv extends AbstractEasyCard {

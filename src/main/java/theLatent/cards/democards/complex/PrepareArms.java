@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theLatent.cards.AbstractEasyCard;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 
 public class PrepareArms extends AbstractEasyCard implements StartupCard {
     public static final String ID = makeID("PrepareArms");

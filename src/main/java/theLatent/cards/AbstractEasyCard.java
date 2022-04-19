@@ -15,12 +15,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theLatent.TheTodo;
+import theLatent.TheLatent;
 import theLatent.util.CardArtRoller;
 
 import java.util.ArrayList;
 
-import static theLatent.TodoMod.*;
+import static theLatent.LatentMod.*;
 import static theLatent.util.Wiz.atb;
 import static theLatent.util.Wiz.att;
 
@@ -45,7 +45,7 @@ public abstract class AbstractEasyCard extends CustomCard {
     private boolean needsArtRefresh = false;
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        this(cardID, cost, type, rarity, target, TheTodo.Enums.TODO_COLOR);
+        this(cardID, cost, type, rarity, target, TheLatent.Enums.LATENT_COLOR);
     }
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {

@@ -13,7 +13,7 @@ import theLatent.cards.AbstractEasyCard;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 import static theLatent.util.Wiz.*;
 
 public class SelectCardsPlusCardMods extends AbstractEasyCard {

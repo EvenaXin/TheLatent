@@ -11,7 +11,7 @@ import theLatent.cards.EasyModalChoiceCard;
 
 import java.util.ArrayList;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 import static theLatent.util.Wiz.*;
 
 public class EasyModalChoiceDemo extends AbstractEasyCard {

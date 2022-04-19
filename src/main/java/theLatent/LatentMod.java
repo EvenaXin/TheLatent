@@ -26,21 +26,21 @@ import java.nio.charset.StandardCharsets;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
-public class TodoMod implements
+public class LatentMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber {
 
-    public static final String modID = "todomod"; //TODO: Change this.
+    public static final String modID = "thelatent"; //TODO: Change this.
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
 
     // This makes debugging so much easier
-    public static Logger logger = LogManager.getLogger(TodoMod.class.getName());
+    public static Logger logger = LogManager.getLogger(LatentMod.class.getName());
 
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
 
@@ -59,10 +59,10 @@ public class TodoMod implements
     private static final String CHARSELECT_BUTTON = modID + "Resources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
 
-    public TodoMod() {
+    public LatentMod() {
         BaseMod.subscribe(this);
 
-        BaseMod.addColor(TheTodo.Enums.TODO_COLOR, characterColor, characterColor, characterColor,
+        BaseMod.addColor(TheLatent.Enums.LATENT_COLOR, characterColor, characterColor, characterColor,
                 characterColor, characterColor, characterColor, characterColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -90,13 +90,13 @@ public class TodoMod implements
     }
 
     public static void initialize() {
-        TodoMod thismod = new TodoMod();
+        LatentMod thismod = new LatentMod();
     }
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheTodo(TheTodo.characterStrings.NAMES[1], TheTodo.Enums.THE_TODO),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheTodo.Enums.THE_TODO);
+        BaseMod.addCharacter(new TheLatent(TheLatent.characterStrings.NAMES[1], TheLatent.Enums.THE_LATENT),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheLatent.Enums.THE_LATENT);
     }
 
     @Override

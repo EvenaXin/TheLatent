@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>UnimportantInfo</groupId>
 
-    <artifactId>TheTodo</artifactId>
+    <artifactId>TheLatent</artifactId>
     <version>0.0.1</version>
-    <name>The Todo</name>
-    <description>TODO: Change this description</description>
+    <name>The Latent</name>
+    <description>The latent is a master at drawing out the latent abilities of herself, her cards, and even her opponents.</description>
     <!-- Change the above for mod information. -->
 
     <properties>
@@ -16,7 +16,7 @@
         <ModTheSpire.version>3.18.2</ModTheSpire.version>
 
         <!-- CHANGE THIS TO MATCH YOUR MODID FIELD IN THE MAIN TodoMod CLASS FILE -->
-        <ModID>todomod</ModID>
+        <ModID>thelatent</ModID>
         <!-- CHANGE THIS TO MATCH YOUR MODID FIELD IN THE MAIN TodoMod CLASS FILE -->
 
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->

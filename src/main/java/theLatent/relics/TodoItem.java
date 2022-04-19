@@ -1,13 +1,13 @@
 package theLatent.relics;
 
-import theLatent.TheTodo;
+import theLatent.TheLatent;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 
 public class TodoItem extends AbstractEasyRelic {
     public static final String ID = makeID("TodoItem");
 
     public TodoItem() {
-        super(ID, RelicTier.STARTER, LandingSound.FLAT, TheTodo.Enums.TODO_COLOR);
+        super(ID, RelicTier.STARTER, LandingSound.FLAT, TheLatent.Enums.LATENT_COLOR);
     }
 }

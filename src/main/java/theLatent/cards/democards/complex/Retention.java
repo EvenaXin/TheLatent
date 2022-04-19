@@ -11,7 +11,7 @@ import theLatent.cards.AbstractEasyCard;
 
 import java.util.Iterator;
 
-import static theLatent.TodoMod.makeID;
+import static theLatent.LatentMod.makeID;
 
 public class Retention extends AbstractEasyCard {
     public final static String ID = makeID("Defend");
