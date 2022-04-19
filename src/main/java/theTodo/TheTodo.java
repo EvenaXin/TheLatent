@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theTodo.cards.Defend;
+import theTodo.cards.HoldOut;
 import theTodo.cards.Strike;
 import theTodo.relics.TodoItem;
 
@@ -76,6 +77,7 @@ public class TheTodo extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(HoldOut.ID);
         return retVal;
     }
 

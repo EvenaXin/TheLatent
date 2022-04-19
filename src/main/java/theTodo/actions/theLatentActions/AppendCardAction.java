@@ -1,6 +1,7 @@
 package theTodo.actions.theLatentActions;
 
 import basemod.abstracts.AbstractCardModifier;
+import basemod.cardmods.RetainMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -45,6 +46,9 @@ public class AppendCardAction extends AbstractGameAction {
                     }
                 }
                 if(!cardInMasterDeck) {
+                    cannotChange.add(c1);
+                }
+                if(modToAppend.equals(new RetainMod()) && c1.isEthereal) {
                     cannotChange.add(c1);
                 }
             }

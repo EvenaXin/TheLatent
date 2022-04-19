@@ -1,8 +1,7 @@
 package theTodo.cards.democards.complex;
 
-import basemod.cardmods.RetainMod;
+import basemod.cardmods.InnateMod;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
-import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,11 +13,11 @@ import java.util.Iterator;
 
 import static theTodo.TodoMod.makeID;
 
-public class Retention extends AbstractEasyCard {
+public class Preamble extends AbstractEasyCard {
     public final static String ID = makeID("Defend");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
-    public Retention() {
+    public Preamble() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         FleetingField.fleeting.set(this, true);
         baseBlock = 5;
@@ -26,12 +25,12 @@ public class Retention extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new AppendCardAction(new RetainMod()));
+        addToBot(new AppendCardAction(new InnateMod()));
     }
 
     @Override
     public void upgrade() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+        Iterator<AbstractCard> var1 = AbstractDungeon.player.masterDeck.group.iterator();
         while(var1.hasNext()) {
             AbstractCard c1 = (AbstractCard)var1.next();
             if (this.uuid == c1.uuid) {
