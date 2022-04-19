@@ -1,28 +1,31 @@
 package theTodo.cards.democards.complex;
 
 import basemod.cardmods.RetainMod;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
+import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTodo.actions.theLatentActions.AppendCardAction;
+import theTodo.cards.AbstractEasyCard;
 
-public class Retention extends AbstractCard {
-    public Retention(String id, String name, String imgUrl, int cost, String rawDescription, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
-        super(id, name, imgUrl, cost, rawDescription, type, color, rarity, target);
+import static theTodo.TodoMod.makeID;
+
+public class Retention extends AbstractEasyCard {
+    public final static String ID = makeID("Defend");
+    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
+    public Retention() {
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        FleetingField.fleeting.set(this, true);
+        baseBlock = 5;
+        tags.add(CardTags.STARTER_DEFEND);
     }
 
-    @Override
-    public void upgrade() {
-
-    }
-
-    @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new AppendCardAction(new RetainMod()));
     }
 
-    @Override
-    public AbstractCard makeCopy() {
-        return null;
+    public void upp() {
+        upgradeBlock(3);
     }
 }
