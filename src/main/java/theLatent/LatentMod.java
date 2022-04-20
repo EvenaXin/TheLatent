@@ -146,6 +146,8 @@ public class LatentMod implements
         BaseMod.loadCustomStringsFile(CharacterStrings.class, modID + "Resources/localization/eng/Charstrings.json");
 
         BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/eng/Powerstrings.json");
+
+        BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/eng/UIstrings.json");
     }
 
     @Override

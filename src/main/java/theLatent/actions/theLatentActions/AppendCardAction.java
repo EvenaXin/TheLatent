@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import theLatent.LatentMod;
 import theLatent.actions.ApplyCardModifierAction;
 
 import java.util.ArrayList;
@@ -129,7 +130,7 @@ public class AppendCardAction extends AbstractGameAction {
         this.p.hand.refreshHandLayout();
     }
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("AppendCardAction");
+        uiStrings = CardCrawlGame.languagePack.getUIString(LatentMod.makeID("AppendCardAction"));
         TEXT = uiStrings.TEXT; //133
     }
 }
