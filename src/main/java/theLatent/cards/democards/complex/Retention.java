@@ -14,7 +14,7 @@ import java.util.Iterator;
 import static theLatent.LatentMod.makeID;
 
 public class Retention extends AbstractEasyCard {
-    public final static String ID = makeID("Defend");
+    public final static String ID = makeID("Retention");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public Retention() {

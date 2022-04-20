@@ -11,7 +11,7 @@ public class HoldOut extends AbstractEasyCard {
     public final static String ID = makeID("HoldOut");
 
     public HoldOut() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = 7;
     }
 

@@ -2,6 +2,10 @@ package theLatent;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.AbstractCardModifier;
+import basemod.cardmods.InnateMod;
+import basemod.cardmods.RetainMod;
+import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import basemod.interfaces.PostCreateStartingDeckSubscriber;
@@ -15,13 +19,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theLatent.cardmods.EnergizedMod;
+import theLatent.cardmods.WeightlessMod;
 import theLatent.cards.AbstractEasyCard;
 import theLatent.cards.Defend;
 import theLatent.cards.Strike;
@@ -147,7 +150,7 @@ public class LatentMod implements
 
         BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/eng/Powerstrings.json");
 
-        BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/eng/UIstrings.json");
+        BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/eng/UIstrings.json");
     }
 
     @Override
@@ -170,16 +173,16 @@ public class LatentMod implements
             if(c.cardID.equals(Strike.ID) || c.cardID.equals(Defend.ID)) {
                 x++;
                 if (x % 4 == 0) {
-                    c.selfRetain = true;
+                    CardModifierManager.addModifier(c, new RetainMod());
                 }
                 if (x % 4 == 1) {
-                    c.isInnate = true;
+                    CardModifierManager.addModifier(c, new InnateMod());
                 }
                 if (x % 4 == 2) {
-                    WeightlessField.weightless.set(c, true);
+                    CardModifierManager.addModifier(c, new WeightlessMod());
                 }
                 if (x % 4 == 3) {
-                    EnergizedField.energized.set(c, true);
+                    CardModifierManager.addModifier(c, new EnergizedMod());
                 }
             }
         }

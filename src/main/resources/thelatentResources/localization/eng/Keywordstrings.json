@@ -6,5 +6,12 @@
       "todos"
     ],
     "DESCRIPTION": "TODO: Make your own epic keywords"
+  },
+  {
+    "PROPER_NAME": "Weightless",
+    "NAMES": [
+      "weightless"
+    ],
+    "DESCRIPTION": "When drawn, draw 1 card."
   }
 ]

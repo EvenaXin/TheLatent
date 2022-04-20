@@ -8,5 +8,8 @@
     "TEXT": [
       "This is a test."
     ]
+  },
+  "${ModID}:Weightless. NL": {
+    "TEXT": "Weightless. NL"
   }
 }

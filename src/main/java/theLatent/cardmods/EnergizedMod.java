@@ -2,38 +2,36 @@ package theLatent.cardmods;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import org.apache.commons.lang3.StringUtils;
-import theLatent.LatentMod;
+import theLatent.fields.EnergizedField;
 import theLatent.fields.WeightlessField;
 
-public class WeightlessMod extends AbstractCardModifier {
-    public static final String ID = "thelatent:WeightlessCardModifier";
-    public WeightlessMod() {
+public class EnergizedMod extends AbstractCardModifier {
+    public static final String ID = "thelatent:EnergizedCardModifier";
+    public EnergizedMod() {
 
     }
 
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return LatentMod.makeID("Weightless. NL") + rawDescription;
+        return StringUtils.capitalize(GameDictionary.ETHEREAL.NAMES[0]) + LocalizedStrings.PERIOD + " NL " + rawDescription;
     }
 
     public boolean shouldApply(AbstractCard card) {
-        return !WeightlessField.weightless.get(card);
+        return !EnergizedField.energized.get(card);
     }
 
     public void onInitialApplication(AbstractCard card) {
-        WeightlessField.weightless.set(card, true);
+        EnergizedField.energized.set(card, true);
     }
 
     public void onRemove(AbstractCard card) {
-        WeightlessField.weightless.set(card, false);
+        EnergizedField.energized.set(card, false);
     }
 
     public AbstractCardModifier makeCopy() {
-        return new WeightlessMod() {
+        return new EnergizedMod() {
         };
     }
 

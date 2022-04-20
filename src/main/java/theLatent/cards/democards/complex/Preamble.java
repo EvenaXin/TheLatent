@@ -14,7 +14,7 @@ import java.util.Iterator;
 import static theLatent.LatentMod.makeID;
 
 public class Preamble extends AbstractEasyCard {
-    public final static String ID = makeID("Defend");
+    public final static String ID = makeID("Preamble");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public Preamble() {
