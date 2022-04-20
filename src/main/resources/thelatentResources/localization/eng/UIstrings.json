@@ -1,0 +1,12 @@
+{
+  "${ModID}:AppendCardAction": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ],
+    "TEXT": [
+      "This is a test."
+    ]
+  }
+}

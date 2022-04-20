@@ -4,12 +4,17 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import basemod.interfaces.PostCreateStartingDeckSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -18,8 +23,12 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theLatent.cards.AbstractEasyCard;
+import theLatent.cards.Defend;
+import theLatent.cards.Strike;
 import theLatent.cards.cardvars.SecondDamage;
 import theLatent.cards.cardvars.SecondMagicNumber;
+import theLatent.fields.EnergizedField;
+import theLatent.fields.WeightlessField;
 import theLatent.relics.AbstractEasyRelic;
 
 import java.nio.charset.StandardCharsets;
@@ -31,7 +40,9 @@ public class LatentMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        PostCreateStartingDeckSubscriber
+{
 
     public static final String modID = "thelatent"; //TODO: Change this.
 
@@ -146,6 +157,28 @@ public class LatentMod implements
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+    }
+
+    @Override
+    public void receivePostCreateStartingDeck(AbstractPlayer.PlayerClass playerClass, CardGroup cardGroup) {
+        int x = 0;
+        for(AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if(c.cardID.equals(Strike.ID) || c.cardID.equals(Defend.ID)) {
+                x++;
+                if (x % 4 == 0) {
+                    c.selfRetain = true;
+                }
+                if (x % 4 == 1) {
+                    c.isInnate = true;
+                }
+                if (x % 4 == 2) {
+                    WeightlessField.weightless.set(c, true);
+                }
+                if (x % 4 == 3) {
+                    EnergizedField.energized.set(c, true);
+                }
             }
         }
     }

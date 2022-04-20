@@ -1,8 +1,10 @@
 package theLatent.cards;
 
+import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theLatent.actions.ApplyCardModifierAction;
 
 import static theLatent.LatentMod.makeID;
 
@@ -15,6 +17,14 @@ public class Strike extends AbstractEasyCard {
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+    }
+
+    public Strike(AbstractCardModifier mod) {
+        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        baseDamage = 6;
+        tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STARTER_STRIKE);
+        addToTop(new ApplyCardModifierAction(this, mod));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

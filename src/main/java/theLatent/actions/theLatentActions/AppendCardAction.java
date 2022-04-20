@@ -130,6 +130,6 @@ public class AppendCardAction extends AbstractGameAction {
     }
     static {
         uiStrings = CardCrawlGame.languagePack.getUIString("AppendCardAction");
-        TEXT = uiStrings.TEXT;
+        TEXT = uiStrings.TEXT; //133
     }
 }

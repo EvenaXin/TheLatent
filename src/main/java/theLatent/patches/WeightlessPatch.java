@@ -14,15 +14,18 @@ import theLatent.fields.WeightlessField;
 import java.util.ArrayList;
 
 @SpirePatch(
- cls = "com.megacrit.cardcrawl.characters.AbstractPlayer",
- method = "draw"
+    cls = "com.megacrit.cardcrawl.characters.AbstractPlayer",
+    method = "draw",
+    paramtypez={
+        int.class
+    }
 )
 public class WeightlessPatch {
     @SpireInsertPatch(
             locator = Locator.class,
             localvars={"c"}
     )
-    public static void patchMethod(AbstractCard _instance, int numCards, AbstractCard c) {
+    public static void patchMethod(AbstractPlayer _instance, int numCards, AbstractCard c) {
         if (WeightlessField.weightless.get(c)) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
         }
